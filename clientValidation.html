@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telecommunication</title>
+    
+</head>
+<body>
+    <h1>Login Page</h1>
+    <form id="login page" onsubmit="return validateform()">
+        <label>Username: <input type="text" id="username" name="username" required></label><br>
+        <label>Email:<input type="text" id="email" name="email" required></label><br>
+        <label>Password: <input type="password" id="password" name="password" required></label><br>
+        <input type="submit" value="Login">
+    </form>
+    <script>
+        function validateform(){
+            var username = document.getElementById("username").value()
+            var email = document.getElementById("email").value()
+            var password = document.getElementById("password").value()
+
+            if (password.length < 8){
+                return false
+            }
+            if (username.length < 3){
+                return false
+            }
+            return true
+        }
+    </script>
+</body>
+</html>
